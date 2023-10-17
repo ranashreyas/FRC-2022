@@ -55,7 +55,7 @@ public class VisionSubsystem extends SubsystemBase {
   }
 
   public double getDistanceFromTarget() {
-    if (table == null) {
+    if (table == null) { // Safeguard if the limelight isn't detected for whatever reason
       return -1.0;
     }
 

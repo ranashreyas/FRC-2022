@@ -172,13 +172,13 @@ public class RobotContainer {
       )
     );
     new Button(m_driver::getBButton).whileActiveOnce(
-      new RunFeederCommand(m_feeder, FeederState.OUTTAKE, 0.2, 0.8)
+      new RunFeederCommand(m_feeder, FeederState.OUTTAKE, 0.8, 0.2) //.2, .8
     );
         
     new Button(m_driver::getYButton).whileActiveOnce(
       new ParallelCommandGroup(
         // new SetXConfigCommand(m_drivetrainSubsystem),
-        new ShootCommand(m_shooterSubsystem, m_visionSubsystem, m_compressor),
+        new ShootCommand(m_shooterSubsystem, ShooterZone.ZONE_6, m_compressor),
         new SequentialCommandGroup(
           new WaitCommand(0.5),
           new RunFeederCommand(m_feeder, FeederState.MANUAL_INTAKE, 0.4, 0.6)

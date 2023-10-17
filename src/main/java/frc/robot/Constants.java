@@ -109,8 +109,9 @@ public final class Constants {
             ZONE_3 (.48, true),
             ZONE_4 (.51 , true),
             ZONE_5 (0.57, true),
-            ZONE_6 (0.69, true),
+            ZONE_6 (0.95, true),
             ZONE_7 (0.728, true),
+            ZONE_MAX (0.95, true),
             EMERGENCY (0.25, false),
             TEST (0.49, true),
             
